@@ -124,6 +124,11 @@ const int  A14_PIN = 22;
 #define NUM_ADDR 15
 #define NUM_DATA 8
 
+y
+const int EN_0_PIN  26
+const int EN_0_PIN  27
+const int EN_0_PIN  28
+
 const int address_pins[NUM_ADDR] =
   {
    A0_PIN,
@@ -713,7 +718,19 @@ int main()
   gpio_init(LED_PIN);
   gpio_set_dir(LED_PIN, GPIO_OUT);
   gpio_put(LED_PIN, 1);
-  
+
+  gpio_init(PIN_EN_0);
+  gpio_set_dir(PIN_EN_0, GPIO_OUT);
+  gpio_put(PIN_EN_0, 0);
+
+  gpio_init(PIN_EN_1);
+  gpio_set_dir(PIN_EN_1, GPIO_OUT);
+  gpio_put(PIN_EN_1, 0);
+
+  gpio_init(PIN_EN_2);
+  gpio_set_dir(PIN_EN_2, GPIO_OUT);
+  gpio_put(PIN_EN_2, 0);
+
   printf("\nSetting GPIOs...");
   sleep_ms(1000);
   
